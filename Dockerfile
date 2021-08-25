@@ -11,6 +11,6 @@ FROM        alpine:3.14.1
 RUN         apk add --update --no-cache curl tini tzdata bash
 COPY        --from=BUILD_IMAGE /usr/local/bin/webhook /usr/local/bin/webhook
 WORKDIR     /config
-EXPOSE      9116
+EXPOSE      9000
 ENTRYPOINT  ["/sbin/tini", "--", "/usr/local/bin/webhook"]
 CMD         ["-verbose", "-hotreload", "-hooks=hooks.yml"]
