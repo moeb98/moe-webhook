@@ -4,12 +4,12 @@ on:
 #  workflow_dispatch:
 #  release:
 #    types: [published]
-#  push:
-#    tags:
-#      - '*'
   push:
-    branches:
-      - master  # Set a branch name to trigger deployment
+    tags:
+      - '*'
+#  push:
+#    branches:
+#      - master  # Set a branch name to trigger deployment
 
 jobs:
   build:
